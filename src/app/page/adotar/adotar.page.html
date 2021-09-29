@@ -27,23 +27,31 @@
 
 <!-- BODY -->
 
-<ion-content class="ion-padding-horizontal" *ngIf="items">
+<ion-content class="ion-padding-horizontal">
 
-  
+  <ion-slides pager="false">
+    <ion-slide>
+      <img src="assets/banner4.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/banner5.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/banner6.png">
+    </ion-slide>
+  </ion-slides>
 
+<h3>Adote! </h3>
+<p>Todos os pets merecem uma vida digna, regada com muito amor e proteção.<br> <ion-text color="danger"></ion-text>
+  Além disso, ao adotar o animal de um abrigo você estará,automaticamente, salvando mais de uma vida,
+  pois o espaço do seu novo melhor amigo será disponibilizado a outro animal de rua que será resgatado.</p>
 
-
-
-
-
-
-
-  <!-- NÃO RETIRAR  <div *ngFor="let item of items | async">
-     <h3>{{ item.title }}</h3>
-     <img src="{{ item.thumbnail }}">
-     {{ item.resume }}
-    </div>-->
-
+<p class="ion-padding-top">
+<ion-button color="danger" expand="block" >
+<ion-icon name="log-out" slot="start"></ion-icon>
+Deseja continuar?
+</ion-button>
+</p>
 
 </ion-content>
 
@@ -72,3 +80,4 @@
     </ion-tabs>
   </ion-toolbar>
 </ion-footer>
+

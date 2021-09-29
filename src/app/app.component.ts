@@ -9,7 +9,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 export class AppComponent {
   public appPages = [
-    { title: 'Adotar', url: '/home', icon: 'caret-up-circle' },
+    { title: 'Adotar', url: '/adotar', icon: 'caret-up-circle' },
     { title: 'Doar', url: '/', icon: 'caret-down-circle' },
     { title: 'Dúvidas', url: '/', icon: 'help-circle' },
     { title: 'Suporte', url: '/', icon: 'information-circle' },
