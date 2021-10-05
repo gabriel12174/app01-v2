@@ -9,37 +9,59 @@
 
     <img src="assets/logo.png" style="width: 140px; height: 50px; margin-left: 40px;" alt="Parada Pet" routerLink="/home">
 
-  <!--Pedir ajuda ao professor para resolver  <ion-thumbnail slot="end" *ngIf="auth.user | async as user; else showLogin">
-      <img src="{{user.photoURL}}" alt="{{user.displayName}}" routerLink="/profile">
-    </ion-thumbnail>-->
     <ng-template #showLogin>
       <ion-thumbnail slot="end">
         <img src="assets/teste.png" style="width: 8
         0px; height: 40px;" alt="logue-se" routerLink="/login">
       </ion-thumbnail>
     </ng-template>
-
-  <!--  <ion-icon name="phone-portrait-outline" slot="end"
-    size="large" class="ion-margin-end" routerLink="/home"></ion-icon>-->
-
   </ion-toolbar>
 </ion-header>
 
 <!-- BODY -->
 
-<ion-content class="ion-padding-horizontal">
+<ion-content class="ion-padding-horizontal" *ngIf="item">
 
-  <div class="bg-primary vertical-padding">
+  <img src="https://image.flaticon.com/icons/svg/163/163801.svg" alt="" style="width: 140px; height: 100px; margin-left: 75px; margin-top: 20px;" class="image-round">
 
-    <img src="https://image.flaticon.com/icons/svg/163/163801.svg" alt="" style="width: 140px; height: 100px; margin-left: 75px; margin-top: 20px;" class="image-round">
-
-    <div class="ion-text-center">
-      <h6 class="text-white"><strong>Juanito Perez</strong></h6>
-    </div>
-
-    <ion-list></ion-list>
-
-  </div>
+    <ion-list>
+      <ion-item class="fonte">
+        <ion-icon name="balloon-outline" class="icon"></ion-icon>
+        <ion-label>Nome: {{ (item | async)?.name }} </ion-label>
+      </ion-item>
+      <ion-item class="fonte">
+        <ion-icon name="male-female-outline" class="icon"></ion-icon>
+        <ion-label>Nascimento: {{ (item | async)?.birth }}</ion-label>
+      </ion-item>
+      <ion-item class="fonte">
+        <ion-icon name="balloon-outline" class="icon"></ion-icon>
+        <ion-label>CPF: {{ (item | async)?.cpf }} </ion-label>
+      </ion-item>
+      <ion-item class="fonte">
+        <ion-icon name="male-female-outline" class="icon"></ion-icon>
+        <ion-label>Sexo: {{ (item | async)?.gender }}</ion-label>
+      </ion-item>
+      <ion-item class="fonte">
+        <ion-icon name="balloon-outline" class="icon"></ion-icon>
+        <ion-label>Email: {{ (item | async)?.email }} </ion-label>
+      </ion-item>
+      <ion-item class="fonte">
+        <ion-icon name="male-female-outline" class="icon"></ion-icon>
+        <ion-label>Telefone: {{ (item | async)?.telephone }}</ion-label>
+      </ion-item>
+      <ion-item class="fonte">
+        <ion-icon name="balloon-outline" class="icon"></ion-icon>
+        <ion-label>Profissão: {{ (item | async)?.profissao }} </ion-label>
+      </ion-item>
+      <ion-item class="fonte">
+        <ion-icon name="male-female-outline" class="icon"></ion-icon>
+        <ion-label>Cidade: {{ (item | async)?.city }}</ion-label>
+      </ion-item>
+      <ion-item class="fonte">
+        <ion-icon name="male-female-outline" class="icon"></ion-icon>
+        <ion-label>Bairro: {{ (item | async)?.district }}</ion-label>
+      </ion-item>
+    </ion-list>
 
 </ion-content>
 
